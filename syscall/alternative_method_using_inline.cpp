@@ -1,5 +1,6 @@
 //x86_64-w64-mingw32-g++ main.cpp -masm=intel -O0 -o direct_syscalls.exe
 // credit to GhostPepper for the original PoC here: https://github.com/ghostpepper108/Evasion
+// This is Steve (@tribouletx) version using inline assembly
 
 #include <windows.h>
 #include <stdio.h>
