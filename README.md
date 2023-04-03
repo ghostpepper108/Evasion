@@ -1,4 +1,4 @@
-# Evasion
+# EDR/AV evasion using direct syscalls
 
 ### Credits
  - Steve - For his quality research posted on https://steve-s.gitbook.io/0xtriboulet/
