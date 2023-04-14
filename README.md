@@ -1,4 +1,4 @@
-# EDR/AV evasion using direct syscalls
+# EDR/AV evasion using direct syscalls and assembly
 
 ### Features:
  - No encryption
