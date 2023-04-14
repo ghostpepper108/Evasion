@@ -6,6 +6,8 @@
  - No CreateThread
  - Direct execution of payload on heap using assembly and returning back
 
+#### NOTE: This is a PoC and can be extended
+
 ### Credits
  - Steve - For his quality research posted on https://steve-s.gitbook.io/0xtriboulet/
  - chatGPT, Google and other innumerable resources
