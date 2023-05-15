@@ -3,7 +3,7 @@
 ### Features:
  - No encryption
  - No VirtualAlloc
- - No CreateThread
+ - No CreateThread (Threadless)
  - Direct execution of payload on heap using assembly and returning back
 
 NOTE: This is a PoC. There are hard-coded values like syscall number. This can be extended futher by using hellsgate or other similar variations like Syswhispers.
